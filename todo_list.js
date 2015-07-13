@@ -1,4 +1,3 @@
-
 var Task = function(id, description) {
   this.id = id;
   this.description = description;
@@ -11,15 +10,14 @@ var TodoList = function() {
 };
 
 TodoList.prototype.add = function(task){
-  this.tasks.push(new Task(this.current_id, task))
-  this.current_id++
+  this.tasks.push(new Task(this.current_id, task));
+  this.current_id++;
 }
 
 TodoList.prototype.list = function(){
-  for(var i = 0; i < this.tasks.length; i++){
-    console.log(this.tasks[i])
+  for(var i = 0; i < this.tasks.length; i++) {
+    console.log(this.tasks[i]);
   }
-
 }
 
 Task.prototype.complete = function(){
@@ -43,9 +41,9 @@ groceryList.list();
 
 var breadTask = groceryList.tasks[0];
 
-console.log(breadTask.id) //-> 1 (some unique numerical ID)
-console.log(breadTask.description) //-> 'bread'
-console.log(breadTask.completed) //-> false
+console.log(breadTask.id); //-> 1 (some unique numerical ID)
+console.log(breadTask.description); //-> 'bread'
+console.log(breadTask.completed); //-> false
 
 breadTask.complete();
 console.log(breadTask.completed);
